@@ -122,7 +122,9 @@
 
         <main class="main" id="main">
             <div class="container">
-                <!-- # User Profile  -->
+                <!----
+                    - #USER Profile Section
+                -->
 
                 <section class="profile" data-profile-card>
                     <figure
@@ -229,9 +231,12 @@
                     </div> -->
                 </section>
 
-                <!-- # TAB -->
+                <!----
+                    - #TAB Navigation Section
+                -->
 
                 <section class="tab-container">
+                    <!-- tab-list  -->
                     <div
                         class="tab-list"
                         aria-label="Tab navigation"
@@ -286,8 +291,9 @@
                         </button>
                     </div>
 
+                    <!-- Repositories tab-panel  tab-1  -->
                     <div
-                        class="tab-pane"
+                        class="tab-panel"
                         aria-labelledby="tab-1"
                         role="tabpanel"
                         id="panel-1"
@@ -296,6 +302,93 @@
                         data-repo-panel
                     >
                         <h2 class="sr-only">Repositories</h2>
+
+                        <!-- repo-card  -->
+
+                        <article class="card repo-card">
+                            <div class="card-body">
+                                <a href="#" target="_blank" class="card-title">
+                                    <h3 class="title-3">weatherio-starter</h3>
+                                </a>
+
+                                <p class="card-text">
+                                    Starter file for weatherio project
+                                </p>
+
+                                <span class="badge"> Public </span>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="meta-item">
+                                    <span
+                                        class="material-symbols-rounded"
+                                        aria-hidden="true"
+                                        >code_blocks</span
+                                    >
+                                    <span>CSS</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span
+                                        class="material-symbols-rounded"
+                                        aria-hidden="true"
+                                        >star_rate</span
+                                    >
+                                    <span>12</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span
+                                        class="material-symbols-rounded"
+                                        aria-hidden="true"
+                                        >family_history</span
+                                    >
+                                    <span>4</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- repo-skeleton  -->
+
+                        <div class="card repo-skeleton">
+                            <div class="card-body">
+                                <div class="skeleton title-skeleton"></div>
+                                <div
+                                    class="skeleton text-skeleton text-1"
+                                ></div>
+                                <div
+                                    class="skeleton text-skeleton text-2"
+                                ></div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="skeleton text-skeleton"></div>
+                                <div class="skeleton text-skeleton"></div>
+                                <div class="skeleton text-skeleton"></div>
+                            </div>
+                        </div>
+
+                        <!-- repo-error  -->
+
+                        <div class="error-content">
+                            <p class="title-1">Oops! :(</p>
+                            <p class="text">
+                                Doesn't have any public repositories yet.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Forked repositories tab-2  -->
+
+                    <div
+                        class="tab-panel"
+                        id="panel-2"
+                        aria-labelledby="tab-2"
+                        role="tabpanel"
+                        tabindex="0"
+                        data-tab-panel
+                        data-fork-panel
+                        hidden
+                    >
+                        <h2 class="sr-only">Forked repositories</h2>
 
                         <article class="card repo-card">
                             <div class="card-body">
@@ -345,18 +438,11 @@
                             </p>
                         </div>
                     </div>
+
+                    <!-- Followers tab-3  -->
+
                     <div
-                        class="tab-pane"
-                        id="panel-2"
-                        aria-labelledby="tab-2"
-                        role="tabpanel"
-                        tabindex="0"
-                        data-tab-panel
-                        data-fork-panel
-                        hidden
-                    ></div>
-                    <div
-                        class="tab-pane"
+                        class="tab-panel"
                         id="panel-3"
                         aria-labelledby="tab-3"
                         role="tabpanel"
@@ -364,9 +450,50 @@
                         data-tab-panel
                         data-follower-panel
                         hidden
-                    ></div>
+                    >
+                        <h2 class="sr-only">Followers</h2>
+
+                        <article class="card follower-card">
+                            <figure class="avatar-circle img-holder">
+                                <img
+                                    src="./assets/images/follower-img.png"
+                                    width="56"
+                                    height="56"
+                                    loading="lazy"
+                                    alt="emilly"
+                                    class="img-cover"
+                                />
+                            </figure>
+
+                            <h3 class="card-title">emilly</h3>
+                            <button
+                                class="icon-btn"
+                                aria-label="Go to emilly profile"
+                            >
+                                <span
+                                    class="material-symbols-rounded"
+                                    aria-hidden="true"
+                                    >link</span
+                                >
+                            </button>
+                        </article>
+
+                        <div class="card follower-skeleton">
+                            <div class="skeleton avatar-skeleton"></div>
+
+                            <div class="skeleton title-skeleton"></div>
+                        </div>
+
+                        <div class="error-content">
+                            <p class="title-1">Oops! :(</p>
+                            <p class="text">Doesn't have any follower yet.</p>
+                        </div>
+                    </div>
+
+                    <!-- Followings tab-4  -->
+
                     <div
-                        class="tab-pane"
+                        class="tab-panel"
                         id="panel-4"
                         aria-labelledby="tab-4"
                         role="tabpanel"
@@ -374,9 +501,60 @@
                         data-tab-panel
                         data-following-panel
                         hidden
-                    ></div>
+                    >
+                        <h2 class="sr-only">Followings</h2>
+
+                        <article class="card follower-card">
+                            <figure class="avatar-circle img-holder">
+                                <img
+                                    src="./assets/images/follower-img.png"
+                                    width="56"
+                                    height="56"
+                                    loading="lazy"
+                                    alt="emilly"
+                                    class="img-cover"
+                                />
+                            </figure>
+
+                            <h3 class="card-title">emilly</h3>
+                            <button
+                                class="icon-btn"
+                                aria-label="Go to emilly profile"
+                            >
+                                <span
+                                    class="material-symbols-rounded"
+                                    aria-hidden="true"
+                                    >link</span
+                                >
+                            </button>
+                        </article>
+
+                        <div class="error-content">
+                            <p class="title-1">Oops! :(</p>
+                            <p class="text">Doesn't have any following yet.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!----
+                    - #Error Content Section
+                -->
+
+                <section class="error" data-error>
+                    <p class="title-1">Oops! :(</p>
+                    <p class="text">
+                        There is no account with this username yet.
+                    </p>
                 </section>
             </div>
         </main>
+
+        <!---
+            - # Footer
+        -->
+
+        <footer class="footer container">
+            <p class="copyright">&copy; 2024 skies-codes</p>
+        </footer>
     </body>
 </html>

@@ -460,6 +460,20 @@ body {
 
 /* Badge */
 
+.badge {
+    background-color: var(--surface-variant);
+    color: var(--alpha-60);
+    max-width: max-content;
+    font-size: var(--label-2);
+    font-weight: var(--weight-semiBold);
+    text-transform: uppercase;
+    height: 24px;
+    line-height: 24px;
+    padding-inline: 12px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--surface-variant-outline);
+}
+
 /* Tab navigation */
 
 .tab-list {
@@ -508,9 +522,87 @@ body {
 
 /* Card */
 
+.card {
+    --spacing: 16px;
+
+    background-color: var(--surface);
+    border-radius: var(--radius-12);
+    overflow: hidden;
+}
+
+.card :where(.card-body, .card-footer) {
+    padding: var(--spacing);
+}
+
 /* Follower card */
 
+.follower-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
+    padding: var(--spacing);
+}
+
+.follower-card .icon-btn {
+    margin-inline-start: auto;
+}
+
+.follower-card .card-title {
+    font-size: var(--body);
+    font-weight: var(--weight-regular);
+    text-transform: capitalize;
+}
+
 /* Repository card */
+
+.repo-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.repo-card .card-body {
+    flex-grow: 1;
+}
+
+.repo-card .card-title {
+    max-width: max-content;
+    padding-inline-end: 76px;
+    transition: var(--transition-short);
+}
+
+.repo-card .card-title:where(:hover, :focus-visible) {
+    color: var(--primary);
+}
+
+.repo-card .card-text {
+    color: var(--on-surface-variant);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+    -webkit-line-clamp: 2;
+    margin-block-start: 8px;
+}
+
+.repo-card .badge {
+    position: absolute;
+    top: var(--spacing);
+    right: var(--spacing);
+}
+
+.repo-card .card-footer {
+    background-color: var(--surface-variant);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
+}
+
+.repo-card .meta-item {
+    color: var(--on-surface);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
 
 /* Skeleton */
 
@@ -582,6 +674,43 @@ body {
     100% {
         transform: translateX(200%);
     }
+}
+
+.repo-skeleton,
+.follower-skeleton {
+    background-color: var(--alpha-5);
+}
+
+.repo-skeleton .text-1 {
+    margin-block: 12px;
+}
+
+.repo-skeleton .text-2 {
+    width: 70%;
+}
+
+.repo-skeleton .card-footer {
+    display: flex;
+    gap: var(--spacing);
+    border-block-start: 1px solid var(--alpha-5);
+}
+
+.repo-skeleton .card-footer .text-skeleton {
+    max-width: 56px;
+    flex-grow: 1;
+}
+
+.follower-skeleton {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing);
+    gap: var(--spacing);
+}
+
+.follower-skeleton .avatar-skeleton {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
 }
 
 /*-----------------------------------*\
@@ -750,13 +879,85 @@ body {
   #TAB
 \*-----------------------------------*/
 
+.tab-container .tab-list {
+    margin-inline: -16px;
+    padding-inline: 16px;
+}
+
+.tab-panel {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-block-start: 16px;
+}
+
+.tab-panel[hidden] {
+    display: none;
+}
+
+.tab-panel .card {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.tab-panel .error-content {
+    width: 100%;
+    padding-block: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-panel .error-content .title-1 {
+    color: var(--alpha-50);
+}
+
+.tab-panel .error-content .text {
+    color: var(--alpha-80);
+}
+
 /*-----------------------------------*\
   #ERROR
 \*-----------------------------------*/
 
+.error {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
+    background-color: var(--background);
+    place-content: center;
+    gap: 8px;
+    text-align: center;
+    z-index: 2;
+    display: none;
+}
+
+.error .title-1 {
+    color: var(--alpha-50);
+}
+
+.error .text {
+    color: var(--alpha-80);
+}
+
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
+
+.footer {
+    padding-block-start: 16px;
+    border-block-start: 1px solid var(--outline);
+    margin-block-start: 16px;
+}
+
+.copyright {
+    color: var(--on-surface-2);
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
