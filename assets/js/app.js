@@ -79,3 +79,24 @@ addEventOnElements($tabBtns, "click", function () {
     $lastActiveTabBtn = this;
     $lastActiveTabPanel = $currentTabPanel;
 });
+
+/**
+ *
+ * Keyboard accessibility for tab buttons
+ *
+ */
+
+addEventOnElements($tabBtns, "keydown", function (e) {
+    const $nextElement = this.nextElementSibling;
+    const $previousElement = this.previousElementSibling;
+
+    if (e.key === "ArrowRight" && $nextElement) {
+        this.setAttribute("tabindex", "-1");
+        $nextElement.setAttribute("tabindex", "0");
+        $nextElement.focus();
+    } else if (e.key === "ArrowLeft" && $previousElement) {
+        this.setAttribute("tabindex", "-1");
+        $previousElement.setAttribute("tabindex", "0");
+        $previousElement.focus();
+    }
+});
