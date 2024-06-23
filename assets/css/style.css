@@ -282,6 +282,13 @@ body {
     font-variant-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
+.fig-img-holder {
+    width: 56px;
+    height: 56px;
+    background-color: var(--alpha-50);
+    overflow: hidden;
+}
+
 .img-holder {
     aspect-ratio: var(--width) / var(--height);
     background-color: var(--alpha-50);

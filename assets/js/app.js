@@ -518,3 +518,73 @@ const updateForkRepo = function () {
 };
 
 $forkTabBtn.addEventListener("click", updateForkRepo);
+
+/**
+ * Follower
+ */
+
+const $followerTabBtn = document.querySelector("[data-follower-tab-btn]");
+const $followerPanel = document.querySelector("[data-follower-panel]");
+
+const updateFollower = function () {
+    $followerPanel.innerHTML = `
+        <div class="card follower-skeleton">
+            <div class="skeleton avatar-skeleton"></div>
+
+            <div class="skeleton title-skeleton"></div>
+        </div>
+    `.repeat(12);
+
+    fetchData(followerUrl, function (data) {
+        $followerPanel.innerHTML = `
+            <h2 class="sr-only">Followers</h2>
+        `;
+
+        if (data.length) {
+            console.log(data);
+            for (const item of data) {
+                const { login: username, avatar_url, url } = item;
+
+                const $followerCard = document.createElement("article");
+                $followerCard.classList.add("card", "follower-card");
+
+                $followerCard.innerHTML = `
+                    <figure class="avatar-circle fig-img-holder">
+                        <img
+                            src="${avatar_url}&s=64"
+                            width="56"
+                            height="56"
+                            loading="lazy"
+                            alt="${username}"
+                            class="img-cover"
+                        />
+                    </figure>
+
+                    <h3 class="card-title">${username}</h3>
+                    <button
+                        class="icon-btn"
+                        onClick="updateProfile(\'${url}'\)"
+                        aria-label="Go to ${username} profile"
+                    >
+                        <span
+                            class="material-symbols-rounded"
+                            aria-hidden="true"
+                            >link</span
+                        >
+                    </button>
+                 `;
+
+                $followerPanel.appendChild($followerCard);
+            }
+        } else {
+            $followerPanel.innerHTML = `
+                <div class="error-content">
+                    <p class="title-1">Oops! :(</p>
+                    <p class="text">Doesn't have any follower yet.</p>
+                </div>
+            `;
+        }
+    });
+};
+
+$followerTabBtn.addEventListener("click", updateFollower);
