@@ -4,7 +4,7 @@ GitDiscovery is a web application for discovering GitHub profiles using the GitH
 
 ## Live Project
 
-Check out the live project hosted on GitHub: [Live]("#")
+Check out the live project hosted on GitHub: [Live]("https://skies-codes.github.io/GitDiscovery/")
 
 ## Preview Images
 ![preview-light](https://github.com/skies-codes/GitDiscovery/assets/111517131/b6b5e79e-50f6-41e1-8bf4-e4ad34cb8483)
