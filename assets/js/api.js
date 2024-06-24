@@ -6,17 +6,14 @@
 
 "use strict";
 
-import config from "../../config.js";
-
-const clientId = config.clientId;
-const clientSecret = config.clientSecret;
+// import config from "../../config.js";
 
 let credentials;
-if (clientId && clientSecret) {
-    credentials = btoa(`${clientId}:${clientSecret}`);
-} else {
-    credentials = null;
-}
+// if (config) {
+//     const clientId = config.clientId;
+//     const clientSecret = config.clientSecret;
+//     credentials = btoa(`${clientId}:${clientSecret}`);
+// }
 
 /**
  *
@@ -27,7 +24,6 @@ if (clientId && clientSecret) {
 
 export async function fetchData(url, successCallback, errorCallback) {
     let response;
-
     if (credentials) {
         response = await fetch(url, {
             method: "GET",
@@ -43,6 +39,7 @@ export async function fetchData(url, successCallback, errorCallback) {
         successCallback(data);
     } else {
         const error = await response.json();
+        console.log(error);
         errorCallback && errorCallback(error);
     }
 }
