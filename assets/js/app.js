@@ -114,8 +114,7 @@ addEventOnElements($tabBtns, "keydown", function (e) {
 
 const $searchSubmit = document.querySelector("[data-search-submit]");
 
-// let apiUrl = "https://api.github.com/users/skies-codes";
-let apiUrl = "https://api.github.com/users/kunal-kushwaha";
+let apiUrl = "https://api.github.com/users/skies-codes";
 let repoUrl,
     followerUrl,
     followingUrl = "";
