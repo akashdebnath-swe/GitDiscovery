@@ -30,7 +30,7 @@ const addEventOnElements = function ($elements, eventType, callback) {
 
 /**
  *
- * Header scroll state
+ * #Header scroll state
  *
  */
 
@@ -42,7 +42,7 @@ window.addEventListener("scroll", function () {
 
 /**
  *
- * Search toggle
+ * #Search toggle
  *
  */
 
@@ -59,7 +59,7 @@ $searchToggler.addEventListener("click", function () {
 
 /**
  *
- * Tab Navigation
+ * #Tab Navigation
  *
  */
 
@@ -85,7 +85,7 @@ addEventOnElements($tabBtns, "click", function () {
 
 /**
  *
- * Keyboard accessibility for tab buttons
+ * #Keyboard accessibility for tab buttons
  *
  */
 
@@ -105,11 +105,11 @@ addEventOnElements($tabBtns, "keydown", function (e) {
 });
 
 /**
- * Work with API
+ *  #Work with API
  */
 
 /**
- * Search
+ * #Search
  */
 
 const $searchSubmit = document.querySelector("[data-search-submit]");
@@ -134,7 +134,7 @@ $searchField.addEventListener("keydown", (e) => {
 });
 
 /**
- * Profile
+ * #Profile
  */
 
 const $profileCard = document.querySelector("[data-profile-card]");
@@ -333,12 +333,10 @@ window.updateProfile = function (profileUrl) {
 updateProfile(apiUrl);
 
 /**
- * Repository
+ * #Repository
  */
 
 let forkedRepos = [];
-
-// ${repoUrl}?sort=created&per_page=12
 
 const updateRepository = function () {
     fetchData(`${repoUrl}?sort=created`, function (data) {
@@ -428,7 +426,7 @@ const updateRepository = function () {
 };
 
 /**
- * Forked Repository
+ * #Forked Repository
  */
 
 const $forkePanel = document.querySelector("[data-fork-panel]");
@@ -519,7 +517,7 @@ const updateForkRepo = function () {
 $forkTabBtn.addEventListener("click", updateForkRepo);
 
 /**
- * Follower
+ * #Follower
  */
 
 const $followerTabBtn = document.querySelector("[data-follower-tab-btn]");
@@ -589,7 +587,7 @@ const updateFollower = function () {
 $followerTabBtn.addEventListener("click", updateFollower);
 
 /**
- * Following
+ * #Following
  */
 
 const $followingTabBtn = document.querySelector("[data-following-tab-btn]");
