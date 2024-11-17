@@ -1,7 +1,7 @@
 /**
  * @license MIT
- * @author skies-codes <akashdebnathwd@gmail.com>
- * @copyright skies-codes 2024
+ * @author is-akash <akashdebnathwd@gmail.com>
+ * @copyright is-akash 2024
  */
 
 "use strict";
@@ -114,7 +114,7 @@ addEventOnElements($tabBtns, "keydown", function (e) {
 
 const $searchSubmit = document.querySelector("[data-search-submit]");
 
-let apiUrl = "https://api.github.com/users/skies-codes";
+let apiUrl = "https://api.github.com/users/is-akash";
 let repoUrl,
     followerUrl,
     followingUrl = "";
