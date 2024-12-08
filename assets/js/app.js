@@ -114,7 +114,7 @@ addEventOnElements($tabBtns, "keydown", function (e) {
 
 const $searchSubmit = document.querySelector("[data-search-submit]");
 
-let apiUrl = "https://api.github.com/users/is-akash";
+let apiUrl = "https://api.github.com/users/theaakashd";
 let repoUrl,
     followerUrl,
     followingUrl = "";
@@ -202,9 +202,8 @@ window.updateProfile = function (profileUrl) {
             followingUrl = following_url.replace("{/other_user}", "");
 
             $profileCard.innerHTML = `
-                    <figure class="${
-                        type === "User" ? "avatar-circle" : "avatar-rounded"
-                    } img-holder" style="--width: 280; --height: 280">
+                    <figure class="${type === "User" ? "avatar-circle" : "avatar-rounded"
+                } img-holder" style="--width: 280; --height: 280">
                         <img 
                             src="${avatar_url}"
                             width="280"
@@ -235,36 +234,32 @@ window.updateProfile = function (profileUrl) {
                     </span>
                 
                     <ul class="profile-meta">
-                        ${
-                            company
-                                ? `
+                        ${company
+                    ? `
                             <li class="meta-item">
                                 <span class="material-symbols-rounded" aria-hidden="true">apartment</span>
                                 <span class="meta-text">${company}</span>
                             </li>`
-                                : ""
-                        }
-                        ${
-                            location
-                                ? `
+                    : ""
+                }
+                        ${location
+                    ? `
                             <li class="meta-item">
                                 <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
                                 <span class="meta-text">${location}</span>
                             </li>`
-                                : ""
-                        }
-                        ${
-                            website
-                                ? `
+                    : ""
+                }
+                        ${website
+                    ? `
                             <li class="meta-item">
                                 <span class="material-symbols-rounded" aria-hidden="true">captive_portal</span>
                                 <a href="${website}" target="_blank" class="meta-text">${website}</a>
                             </li>`
-                                : ""
-                        }
-                        ${
-                            twitter_username
-                                ? `
+                    : ""
+                }
+                        ${twitter_username
+                    ? `
                             <li class="meta-item">
                                 <span class="icon">
                                     <svg
@@ -286,25 +281,22 @@ window.updateProfile = function (profileUrl) {
                                     >@${twitter_username}</a>
                             </li>
                             `
-                                : ""
-                        }
+                    : ""
+                }
                     </ul>
                 
                     <div class="profile-stats">
                         <li class="stats-item">
-                            <span class="body">${
-                                public_repos ? numberToKilo(public_repos) : 0
-                            }</span> Repos
+                            <span class="body">${public_repos ? numberToKilo(public_repos) : 0
+                }</span> Repos
                         </li>
                         <li class="stats-item">
-                            <span class="body">${
-                                followers ? numberToKilo(followers) : 0
-                            }</span> Followers
+                            <span class="body">${followers ? numberToKilo(followers) : 0
+                }</span> Followers
                         </li>
                         <li class="stats-item">
-                            <span class="body">${
-                                following ? numberToKilo(following) : 0
-                            }</span> Following
+                            <span class="body">${following ? numberToKilo(following) : 0
+                }</span> Following
                         </li>
                     </div>
                 
@@ -366,21 +358,18 @@ const updateRepository = function () {
                             <h3 class="title-3">${name}</h3>
                         </a>
 
-                        ${
-                            description
-                                ? `<p class="card-text">${description}</p>`
-                                : ""
-                        }
+                        ${description
+                        ? `<p class="card-text">${description}</p>`
+                        : ""
+                    }
 
-                        <span class="badge">${
-                            isPrivate ? "Private" : "Public"
-                        }</span>
+                        <span class="badge">${isPrivate ? "Private" : "Public"
+                    }</span>
                     </div>
 
                     <div class="card-footer">
-                    ${
-                        language
-                            ? `
+                    ${language
+                        ? `
                         <div class="meta-item">
                             <span
                                 class="material-symbols-rounded"
@@ -389,7 +378,7 @@ const updateRepository = function () {
                             >
                             <span>${language}</span>
                         </div>`
-                            : ""
+                        : ""
                     }
                         <div class="meta-item">
                             <span
@@ -456,21 +445,18 @@ const updateForkRepo = function () {
                         <h3 class="title-3">${name}</h3>
                     </a>
 
-                    ${
-                        description
-                            ? `<p class="card-text">${description}</p>`
-                            : ""
-                    }
+                    ${description
+                    ? `<p class="card-text">${description}</p>`
+                    : ""
+                }
 
-                    <span class="badge">${
-                        isPrivate ? "Private" : "Public"
-                    }</span>
+                    <span class="badge">${isPrivate ? "Private" : "Public"
+                }</span>
                 </div>
 
                 <div class="card-footer">
-                ${
-                    language
-                        ? `
+                ${language
+                    ? `
                     <div class="meta-item">
                         <span
                             class="material-symbols-rounded"
@@ -479,7 +465,7 @@ const updateForkRepo = function () {
                         >
                         <span>${language}</span>
                     </div>`
-                        : ""
+                    : ""
                 }
                     <div class="meta-item">
                         <span

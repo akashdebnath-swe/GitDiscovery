@@ -1,262 +1,145 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>GitFinder - Github user finder</title>
-        <meta name="title" content="GitDiscovery - Discovery GitHub Users" />
-        <meta
-            name="description"
-            content="Discover a github user information with GitDiscovery."
-        />
-        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
-        <!-- theme js  -->
-        <script src="./assets/js/theme.js"></script>
-        <!-- google font links  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <!-- material icon link  -->
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
-        />
 
-        <!-- custom css link  -->
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <!-- custom js link  -->
-        <script src="./assets/js/app.js" type="module"></script>
-    </head>
-    <body>
-        <!-- #skip to content  -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitFinder - Github user finder</title>
+    <meta name="title" content="GitDiscovery - Discovery GitHub Users" />
+    <meta name="description" content="Discover a github user information with GitDiscovery." />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <!-- theme js  -->
+    <script src="./assets/js/theme.js"></script>
+    <!-- google font links  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- material icon link  -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
 
-        <a href="#main" class="skip-to-content">Skip to Content</a>
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- custom js link  -->
+    <script src="./assets/js/app.js" type="module"></script>
+</head>
 
-        <!-- header  -->
+<body>
+    <!-- #skip to content  -->
 
-        <header class="header" data-header>
-            <div class="container">
-                <a
-                    href="https://is-akash.github.io/GitDiscovery/"
-                    class="logo"
-                    target="_self"
-                >
-                    <span class="text-primary">Git</span>Discovery
-                </a>
-                <!-- header-search  -->
-                <div class="header-search">
-                    <button
-                        class="icon-btn search-toggler"
-                        aria-controls="searchBox"
-                        aria-expanded="false"
-                        aria-label="Toggle search"
-                        data-search-toggler
-                    >
-                        <span
-                            class="material-symbols-rounded search-icon"
-                            aria-hidden="true"
-                            >search</span
-                        >
+    <a href="#main" class="skip-to-content">Skip to Content</a>
 
-                        <span
-                            class="material-symbols-rounded close-icon"
-                            aria-hidden="true"
-                            >arrow_back</span
-                        >
-                    </button>
+    <!-- header  -->
 
-                    <div class="search-box" id="searchBox">
-                        <span
-                            class="material-symbols-rounded leading-icon"
-                            aria-hidden="true"
-                            >search
-                        </span>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="https://theaakashd.github.io/GitDiscovery/" class="logo" target="_self">
+                <span class="text-primary">Git</span>Discovery
+            </a>
+            <!-- header-search  -->
+            <div class="header-search">
+                <button class="icon-btn search-toggler" aria-controls="searchBox" aria-expanded="false"
+                    aria-label="Toggle search" data-search-toggler>
+                    <span class="material-symbols-rounded search-icon" aria-hidden="true">search</span>
 
-                        <input
-                            type="search"
-                            name="search"
-                            aria-label="Search github username"
-                            placeholder="Search username*"
-                            class="search-field label-1"
-                            data-search-field
-                        />
-
-                        <button
-                            class="search-btn"
-                            aria-label="Search submit"
-                            data-search-submit
-                        >
-                            <span
-                                class="material-symbols-rounded"
-                                aria-hidden="true"
-                                >search</span
-                            >
-                            <span class="label-1">Search</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Light and Dark mode buttons  -->
-
-                <button
-                    class="icon-btn theme-btn"
-                    aria-pressed="false"
-                    aria-label="Toggle dark and light theme"
-                    data-theme-btn
-                >
-                    <span
-                        class="material-symbols-rounded sun-icon"
-                        aria-hidden="true"
-                        >light_mode</span
-                    >
-
-                    <span
-                        class="material-symbols-rounded moon-icon"
-                        aria-hidden="true"
-                        >dark_mode</span
-                    >
+                    <span class="material-symbols-rounded close-icon" aria-hidden="true">arrow_back</span>
                 </button>
+
+                <div class="search-box" id="searchBox">
+                    <span class="material-symbols-rounded leading-icon" aria-hidden="true">search
+                    </span>
+
+                    <input type="search" name="search" aria-label="Search github username"
+                        placeholder="Search username*" class="search-field label-1" data-search-field />
+
+                    <button class="search-btn" aria-label="Search submit" data-search-submit>
+                        <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                        <span class="label-1">Search</span>
+                    </button>
+                </div>
             </div>
-        </header>
 
-        <!-- main  -->
+            <!-- Light and Dark mode buttons  -->
 
-        <main class="main" id="main">
-            <div class="container">
-                <!----
+            <button class="icon-btn theme-btn" aria-pressed="false" aria-label="Toggle dark and light theme"
+                data-theme-btn>
+                <span class="material-symbols-rounded sun-icon" aria-hidden="true">light_mode</span>
+
+                <span class="material-symbols-rounded moon-icon" aria-hidden="true">dark_mode</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- main  -->
+
+    <main class="main" id="main">
+        <div class="container">
+            <!----
                     - #USER Profile Section
                 -->
 
-                <section class="profile" data-profile-card></section>
+            <section class="profile" data-profile-card></section>
 
-                <!----
+            <!----
                     - #TAB Navigation Section
                 -->
 
-                <section class="tab-container">
-                    <!-- tab-list  -->
-                    <div
-                        class="tab-list"
-                        aria-label="Tab navigation"
-                        role="tablist"
-                    >
-                        <button
-                            class="tab-btn"
-                            aria-selected="true"
-                            role="tab"
-                            id="tab-1"
-                            tabindex="0"
-                            aria-controls="panel-1"
-                            data-tab-btn
-                        >
-                            Repositories
-                        </button>
-                        <button
-                            class="tab-btn"
-                            aria-selected="false"
-                            role="tab"
-                            id="tab-2"
-                            tabindex="-1"
-                            aria-controls="panel-2"
-                            data-tab-btn
-                            data-forked-tab-btn
-                        >
-                            Forked
-                        </button>
-                        <button
-                            class="tab-btn"
-                            aria-selected="false"
-                            role="tab"
-                            id="tab-3"
-                            tabindex="-1"
-                            aria-controls="panel-3"
-                            data-tab-btn
-                            data-follower-tab-btn
-                        >
-                            Followers
-                        </button>
-                        <button
-                            class="tab-btn"
-                            aria-selected="false"
-                            role="tab"
-                            id="tab-4"
-                            tabindex="-1"
-                            aria-controls="panel-4"
-                            data-tab-btn
-                            data-following-tab-btn
-                        >
-                            Following
-                        </button>
-                    </div>
+            <section class="tab-container">
+                <!-- tab-list  -->
+                <div class="tab-list" aria-label="Tab navigation" role="tablist">
+                    <button class="tab-btn" aria-selected="true" role="tab" id="tab-1" tabindex="0"
+                        aria-controls="panel-1" data-tab-btn>
+                        Repositories
+                    </button>
+                    <button class="tab-btn" aria-selected="false" role="tab" id="tab-2" tabindex="-1"
+                        aria-controls="panel-2" data-tab-btn data-forked-tab-btn>
+                        Forked
+                    </button>
+                    <button class="tab-btn" aria-selected="false" role="tab" id="tab-3" tabindex="-1"
+                        aria-controls="panel-3" data-tab-btn data-follower-tab-btn>
+                        Followers
+                    </button>
+                    <button class="tab-btn" aria-selected="false" role="tab" id="tab-4" tabindex="-1"
+                        aria-controls="panel-4" data-tab-btn data-following-tab-btn>
+                        Following
+                    </button>
+                </div>
 
-                    <!-- Repositories tab-panel  tab-1  -->
-                    <div
-                        class="tab-panel"
-                        aria-labelledby="tab-1"
-                        role="tabpanel"
-                        id="panel-1"
-                        tabindex="0"
-                        data-tab-panel
-                        data-repo-panel
-                    ></div>
+                <!-- Repositories tab-panel  tab-1  -->
+                <div class="tab-panel" aria-labelledby="tab-1" role="tabpanel" id="panel-1" tabindex="0" data-tab-panel
+                    data-repo-panel></div>
 
-                    <!-- Forked repositories tab-2  -->
+                <!-- Forked repositories tab-2  -->
 
-                    <div
-                        class="tab-panel"
-                        id="panel-2"
-                        aria-labelledby="tab-2"
-                        role="tabpanel"
-                        tabindex="0"
-                        data-tab-panel
-                        data-fork-panel
-                        hidden
-                    ></div>
+                <div class="tab-panel" id="panel-2" aria-labelledby="tab-2" role="tabpanel" tabindex="0" data-tab-panel
+                    data-fork-panel hidden></div>
 
-                    <!-- Followers tab-3  -->
+                <!-- Followers tab-3  -->
 
-                    <div
-                        class="tab-panel"
-                        id="panel-3"
-                        aria-labelledby="tab-3"
-                        role="tabpanel"
-                        tabindex="0"
-                        data-tab-panel
-                        data-follower-panel
-                        hidden
-                    ></div>
+                <div class="tab-panel" id="panel-3" aria-labelledby="tab-3" role="tabpanel" tabindex="0" data-tab-panel
+                    data-follower-panel hidden></div>
 
-                    <!-- Followings tab-4  -->
+                <!-- Followings tab-4  -->
 
-                    <div
-                        class="tab-panel"
-                        id="panel-4"
-                        aria-labelledby="tab-4"
-                        role="tabpanel"
-                        tabindex="0"
-                        data-tab-panel
-                        data-following-panel
-                        hidden
-                    ></div>
-                </section>
+                <div class="tab-panel" id="panel-4" aria-labelledby="tab-4" role="tabpanel" tabindex="0" data-tab-panel
+                    data-following-panel hidden></div>
+            </section>
 
-                <!----
+            <!----
                     - #Error Content Section
                 -->
 
-                <section class="error" data-error></section>
-            </div>
-        </main>
+            <section class="error" data-error></section>
+        </div>
+    </main>
 
-        <!---
+    <!---
             - # Footer
         -->
 
-        <footer class="footer container">
-            <p class="copyright">&copy; 2024 is-akash</p>
-        </footer>
-    </body>
+    <footer class="footer container">
+        <p class="copyright">&copy; 2024 is-akash</p>
+    </footer>
+</body>
+
 </html>
